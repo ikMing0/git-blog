@@ -1,0 +1,29 @@
+server:
+  port: 8989
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/czm_blog?characterEncoding=utf-8&serverTimezone=UTC&serverTimezone=Asia/Shanghai
+    username: root
+    password: 1233
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+
+mybatis-plus:
+  configuration:
+    # 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
+
+
+oss:
+  accessKey: Kot8x6vZo61EPUrtnZrVlxf3ESl9k50mcTl0jtgb
+  secretKey: g3_aQSnRFMhLG8JQRd-JFLb1MX3QQrSKlxjq7nyr
+  bucket: czm-blog
